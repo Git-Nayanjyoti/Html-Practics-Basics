@@ -1,0 +1,31 @@
+Begin
+numeric Score<-0
+string Status<-NULL
+numeric assn_marks<-0
+numeric mtt<-0
+numeric mpt<-0
+input assn_marks
+input mtt
+input mpt
+marks= (0.15*assn_marks )+ (0.15*mtt) + (0.7*mpt)	
+if (marks>=0 and marks<=49)
+Score=0
+Status=”Fail”
+else if (marks>=50 and marks<=59)
+Score=1
+Status=”Fail”
+else if (marks>=60 and marks<=69)
+Score=2
+Status=”Pass”
+else if (marks>=70 and marks<=79)
+Score=3
+Status=”Pass”
+else if (marks>=80 and marks<=89)
+Score=4
+Status=”Pass”
+else if (marks>=90 and marks<=99)
+Score=5
+Status=”Pass”
+display Score					
+display Status					
+End

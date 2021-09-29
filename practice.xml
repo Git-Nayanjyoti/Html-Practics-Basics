@@ -1,0 +1,12 @@
+<fruits>
+<fruit1>
+<name>apple</name>
+<price>$10</price>
+<color>red</color>
+</fruit1>
+<fruit2>
+<name>mango</name>
+<color>green</color>
+<price>$25</price>
+</fruit2>
+</fruits>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title> Reverse</title>
+    </head>
+    <body>
+        <from>
+            Enter a string: <input type="text" id="text">
+            <input type="button" onclick="reverse()" value="Reverse">
+        </from>
+        <p id="id"></p>
+        <script>
+            function reverse(){
+                var word=document.getElementById("text").value;
+                document.getElementById("id").innerHTML= word.split('').reverse().join('');
+            }
+            
+        </script>
+    </body>
+</html>

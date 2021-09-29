@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        check if a number is within 100
+    </title>
+</head>
+
+<body>
+    <form>
+        Enter a number: <input type="number" id="num" required>
+        <input type="button" onclick="check()" value="Check">
+    </form>
+    <p id="id"></p>
+    <script>
+        function check() {
+            var number = document.getElementById("num").value;
+            if (number < 100) {
+                document.getElementById("id").innerHTML = "The number is within 100";
+            } else
+                document.getElementById("id").innerHTML = "The number is not within 100";
+        }
+
+    </script>
+</body>
+
+</html>

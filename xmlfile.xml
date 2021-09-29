@@ -1,0 +1,79 @@
+<?xml version= “1.0”?>
+<Trainee_details>
+    <Trainee1>
+        <employee_number> 810599 </employee_number>
+        <module_name> Core Java </module_name>
+        <Mpt_marks> 54 </Mpt_marks>
+        <mtt_marks> 15 </mtt_marks>
+        <assignment_marks> 84 </assignment_marks>
+        <total> 70 </total>
+        <score> 3 </score>
+
+    </Trainee1>
+    <Trainee2>
+        <employee_number> 800519 </employee_number>
+        <module_name>  Core Java </module_name>
+        <Mpt_marks> 44 </Mpt_marks>
+        <mtt_marks> 15 </mtt_marks>
+        <assignment_marks> 85 </assignment_marks>
+        <total> 60 </total>
+        <score> 2 </score>
+    </Trainee2>
+    <Trainee3>
+        <employee_number> 811191 </employee_number>
+        <module_name> C# </module_name>
+        <Mpt_marks> 34 </Mpt_marks>
+        <mtt_marks> 10 </mtt_marks>
+        <assignment_marks> 86 </assignment_marks>
+        <total> 49 </total>
+        <score> 0 </score>
+    </Trainee3>
+    <Trainee4>
+        <employee_number> 811192 </employee_number>
+        <module_name> Core Java </module_name>
+        <Mpt_marks> 52 </Mpt_marks>
+        <mtt_marks> 21 </mtt_marks>
+        <assignment_marks> 86 </assignment_marks>
+        <total> 70 </total>
+        <score> 3 </score>
+
+    </Trainee4>
+    <Trainee5>
+        <employee_number> 810599 </employee_number>
+        <module_name> Servelet-JSP </module_name>
+        <Mpt_marks> 12 </Mpt_marks>
+        <mtt_marks> 24 </mtt_marks>
+        <assignment_marks> 85 </assignment_marks>
+        <total> 40 </total>
+        <score> 0 </score>
+        <employee_number> 810599 </employee_number>
+        <module_name> Spring </module_name>
+        <Mpt_marks> 44 </Mpt_marks>
+        <mtt_marks> 11 </mtt_marks>
+        <assignment_marks> 64 </assignment_marks>
+        <total> 0 </total>
+        <score> 0 </score>
+    </Trainee5>
+    </Trainees>
+
+    <xs:schema xmlns:xs="#">
+        <xs:element name="Trainee_Details">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="Trainee1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="employee_number" type="xs:string" />
+                                <xs:element name="module_name" type="xs:string" />
+                                <xs:element name="Mpt_marks" type="xs:number" />
+                                <xs:element name="mtt_marks" type="xs:number" />
+                                <xs:element name="assignment_marks" type="xs:number" />
+                                <xs:element name="total" type="xs:number" />
+                                <xs:element name="score" type="xs:number" />
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>

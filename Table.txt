@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Table with CSS
+        </title>
+    </head>
+    <style>
+        table,th,td{
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        tr:nth-child(even){
+            background-color: #dddddd;
+            border-collapse: collapse;
+            border: 1px solid black ;
+            padding: 5px;
+
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <body>
+        <table>
+            <tr>
+                <th>Course Number</th>
+                <th>Course Title</th>
+                <th>Semester Taken</th>
+            </tr>
+            <tr>
+                <td colspan="3">Spring 2016</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="3"><b>For Credit</b></td>
+            </tr>
+            <tr>
+                <td>6.813</td>
+                <td>User Interface Design</td>
+                <td>Spring 2014</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="3"><b>Listener</b></td>
+            </tr>
+            <tr>
+                <td>6.034</td>
+                <td>Artificial Intelligence</td>
+                <td>Spring 2015</td>
+            </tr>
+            <tr>
+                <td>6.006</td>
+                <td>Introduction to Algorithms</td>
+                <td>Fall 2014</td>
+            </tr>
+            <tr style="color: green;">
+                <td>7.001</td>
+                <td>Neural Networks</td>
+                <td>Aug 17,2021</td>
+            </tr>
+        </table>
+    </body>
+</html>

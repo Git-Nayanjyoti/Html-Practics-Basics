@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Hotel Reservation
+    </title>
+</head>
+<style>
+    body {
+
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 30px;
+    }
+    input[name=text1] {
+        width: 10%;
+        padding: 5px 0 0 5px;
+        margin: 0px 0px 0px 4px;
+    }
+    input[name=text2] {
+        width: 30%;
+        padding: 5px 0 0 5px;
+        margin: 5px 5px 5px 17px;
+    }
+    input[name=num] {
+        width: 10%;
+        padding: 5px 0 0 10px;
+        margin: 5px 5px 5px 3px;
+    }
+    input[name=marks1] {
+        width: 10%;
+        padding: 5px 0 0 10px;
+        margin: 5px 5px 5px 52px;
+    }
+    input[name=marks2] {
+        width: 10%;
+        padding: 5px 0 0 10px;
+        margin: 5px 5px 5px 49px;
+    }
+    input[name=marks3] {
+        width: 10%;
+        padding: 5px 0 0 10px;
+        margin: 5px 5px 5px 3px;
+    }
+    select {
+        width: 17%;
+        padding: 5px 0 0 10px;
+        margin: 5px;
+    }
+    .add {
+        padding: 15px;
+
+    }
+
+    .radio {
+        padding: 10px;
+    }
+
+    .score {
+        padding-left: 100px;
+        padding-top: 20px;
+    }
+</style>
+<body>
+    <h1 style="padding-left: 10px; "><b>Module Score Calculation</b></h1>
+
+    <form style="border: 0px solid;">
+        <div class="number">
+            Enter Employee Number <input type="text" pattern="\d{6}" maxlength="6" required name="text1">
+        </div>
+        <div class="name">
+            Enter Employee Name <input type="text" required name="text2" maxlength="30">
+        </div>
+        <div class="Domain">
+            Choose Domain <select name="select domain" id="domain" onchange="Domain()" required>
+                <option value="select_domain"> Select Domain </option>
+                <option value="jee">JEE</option>
+                <option value="net">.NET</option>
+            </select>
+        </div>
+        <div class="choosemodule">
+            Choose Module
+            <select name="choose module" id="jee" required>
+                <option value="select_module"> Please select a Module </option>
+                <option value="corejava">Core Java</option>
+                <option value="servletjsp">Servlet-JSP</option>
+                <option name="spring">Spring</option>
+            </select>
+            <select name="chosoe module" id="net" required>
+                <option value="select_module"> Please select a Module </option>
+                <option value="c#">C#</option>
+                <option value="ado.net">ADO.NET</option>
+                <option value="asp.net">ASP.NET</option>
+            </select>
+        </div>
+        </div>
+        <div class="marks">
+            Enter MPT Marks <input type="number" id="mpt" required name="marks1">
+        </div>
+        <div class="marks">
+            Emter MTT Marks <input type="number" id="mtt" required name="marks2">
+        </div>
+        <div class="marks">
+            Enter Assignment Marks <input type="number" id="assignment" required name="marks3">
+        </div>
+
+        <div class="score">
+            <input type="button" value="Calculate Module Score" size="3" required  onclick="score()">
+        </div>
+    </form>
+    <span id="result"></span>
+    <script>
+        function Domain() {
+            var domain = document.getElementById("domain").value;
+            if (domain == 'jee') {
+                document.getElementById('jee').style.display = "block";
+                document.getElementById('net').style.display = "none";
+            }
+            else if (domain == "net") {
+                document.getElementById('jee').style.display = "none";
+                document.getElementById('net').style.display = "block";
+            }
+            else {
+                document.getElementById('jee').style.display = "none";
+                document.getElementById('net').style.display = "none";
+            }
+
+
+
+        }
+        function score() {
+            var mpt_marks = document.getElementById('mpt').value;
+            var mtt_marks = document.getElementById('mtt').value;
+            var assignment_marks = document.getElementById('assignment').value;
+
+            if (isNaN(mpt_marks) || mpt_marks < 1 || mpt_marks > 64) {
+                alert("Please enter correct values for MPT marks")
+            }
+            else if (isNaN(mtt_marks) || mtt_marks < 1 || mtt_marks > 70) {
+                alert("Please enter correct values for MTT marks")
+            }
+            else if (isNaN(assignment_marks) || assignment_marks < 1 || assignment_marks > 100) {
+                alert("Please enter correct values for Assignment marks")
+            }
+            else {
+                assignment_marks = assignment_marks * (15 / 100);
+                mtt_marks = mtt_marks * (15 / 100);
+                mpt_marks = mpt_marks * (70 / 100);
+
+                total_marks = assignment_marks + mtt_marks + mpt_marks;
+
+                if (total_marks <= 49) {
+                    document.getElementById('result').innerHTML = '<p class="fail">As your total score is ' + total_marks + ', you have FAILED in your exam with a score of 0 </p>';
+                }
+                else if (total_marks >= 50 && total_marks <= 59) {
+                    document.getElementById('result').innerHTML = '<p class="fail">As your total score is ' + total_marks + ', you have FAILED in your exam with a score of 1</p>';
+                }
+                else if (total_marks >= 60 && total_marks <= 69) {
+                    document.getElementById('result').innerHTML = '<p class="pass">As your total score is ' + total_marks + ', you have PASSED in your exam with a score of 2</p>';
+                }
+                else if (total_marks >= 70 && total_marks <= 79) {
+                    document.getElementById('result').innerHTML = '<p class="pass">As your total score is ' + total_marks + ', you have PASSED in your exam with a score of 3</p>';
+                }
+                else if (total_marks >= 80 && total_marks <= 89) {
+                    document.getElementById('result').innerHTML = '<p class="pass">As your total score is ' + total_marks + ', you have PASSED in your exam with a score of 4</p>';
+                }
+                else {
+                    document.getElementById('result').innerHTML = 'As your total score is ' + total_marks + ', you have PASSED in your exam with a score of 5';
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        .fail {
+            color: red;
+        }
+
+        .pass {
+            color: green;
+        }
+
+        #jee {
+            display: none;
+        }
+
+        #net {
+            display: none;
+        }
+        </style>
+    </body>
+</html>

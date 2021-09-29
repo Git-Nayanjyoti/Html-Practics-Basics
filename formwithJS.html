@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Hotel Reservation
+    </title>
+</head>
+<style>
+    body {
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type=text],
+    input[type=number],
+    label,
+    input[type=email] {
+        width: 30%;
+        padding: 5px 0 0 5px;
+        margin: 5px 5px 5px 5px;
+    }
+
+
+    .child,
+    .comment,
+    .sub,
+    .adults,
+    .name,
+    .phone,
+    .date,
+    .email,
+    .dept {
+        padding: 5px;
+    }
+
+    .add {
+        padding: 15px;
+
+    }
+
+    .radio {
+        padding: 10px;
+    }
+
+    .sub {
+        padding-left: 15px;
+    }
+</style>
+
+<body>
+    <p><b>Hotel Reservation</b></p>
+
+    <form style="border: 0px solid;">
+        <div class="name">
+            First Name *<br>
+            <input type="text" name="First Name" required>
+        </div>
+        <div class="name">
+            Last Name *<br>
+            <input type="text" name="First Name" required>
+        </div>
+        <div class="phone">
+            Phone * <br>
+            <input type="number" id="num" required>
+
+        </div>
+        <div class="email">
+            Email *<br>
+            <input type="email" id="email" required>
+        </div>
+
+        </div>
+        <div class="date">
+            Arrival date *<br>
+            <input type="date" id="adate" required>
+        </div>
+        <div class="dept">
+            Departure date *<br>
+            <input type="date" id="ddate" required >
+            
+
+        </div>
+        <div class="adults">
+            Number of adults *<br>
+            <input type="number" id="numofadults" required onclick="time()">
+        </div>
+        <div class="child">
+            Number of children<br>
+            <input type="number" id="numofchildren" required>
+        </div>
+        <div class="comment">
+            Quesions/comment <br>
+            <textarea name="add" required style="height: 80px; width: 98%;">
+            </textarea>
+        </div>
+
+        <div class="sub">
+            <input type="submit" required>
+        </div>
+    </form>
+    <script>
+        function time() {
+            const arrivaldate = document.getElementById("adate").value;
+            const departuredate = document.getElementById("ddate").value;
+            if (arrivaldate > departuredate) {
+                alert("The arrival date should be earlier than deperture date.");
+            }
+        }
+    </script>
+</body>
+
+</html>

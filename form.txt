@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Using Form Tag
+    </title>
+</head>
+<style>
+    body {
+        
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=number],
+    label,
+    input[type=email] {
+        width: 30%;
+        padding: 5px 0 0 5px;
+        margin: 5px 5px 5px 5px;
+    }
+
+    select[name],
+    input[radio] {
+        width: 15%;
+        margin: 5px;
+        padding: 5px 0 0 5px;
+    }
+
+    .gen,
+    .ph,
+    .name,
+    .cour,
+    .pass,
+    .mail {
+        padding: 5px;
+    }
+    .add{
+        padding: 15px;
+
+    }
+
+    .radio {
+        padding: 10px;
+    }
+    .sub {
+        padding-left: 15px;
+    }
+</style>
+
+<body style="background-color: cyan;">
+
+    <form style="border: 0px solid;">
+        <div class="name">
+            <label for="firstname">First Name</label>
+            <input type="text" name="First Name" required>
+            <br>
+            <label for="middlename">Middle Name</label>
+            <input type="text" name="First Name" required>
+            <br>
+            <label for="lastname">Last Name</label>
+            <input type="text" name="First Name" required>
+        </div>
+        <div class="cour">
+            <label for="course">Course</label>
+            <select name="country">
+                <option value="course">Course</option>
+            </select>
+        </div>
+        <div class="gen">
+            <label style="padding-top: 5px;" for="gender">Gender</label>
+            <div class="radio">
+                <input type="radio" name="male" required>Male
+                <br>
+                <input type="radio" name="female" required>Female
+                <br>
+                <input type="radio" name="other" required>Other
+            </div>
+
+        </div>
+        <div class="ph">
+            <label for="phone">Phone</label>
+            <input type="number" placeholder="+91" style="width: 35px">
+            <input type="number">
+
+        </div>
+        <div class="add">
+            Address
+            <textarea name="add" required style="height: 80px; width: 98%;">
+            </textarea>
+        </div>
+
+        <div class="mail">
+            <label for="email">E-mail</label>
+            <input type="email" required>
+        </div>
+
+        <div class="pass">
+            <label for="password">Password</label>
+            <input type="password" required>
+            <br>
+            <label for="retype-password">ReType Password</label>
+            <input type="password" required>
+
+        </div>
+        <div class="sub">
+            <input type="submit" required>
+        </div>
+    </form>
+</body>
+
+</html>

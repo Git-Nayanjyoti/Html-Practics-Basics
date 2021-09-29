@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice</title>
+    </head>
+    <body style="align-content: center;">
+        <style>
+            p{
+                color: coral;  
+            }
+            a:link{
+                color: cornflowerblue;
+                background-color: transparent;
+            }
+            a:visited{
+                color: teal;
+                background-color: thistle;
+            }
+            a:hover{
+                color: tomato;
+                background-color: yellow;
+            }
+        </style>
+        <style>
+            table,th,td{
+                border: 1px solid black;
+            }
+        </style>
+        <p><b>Practice Day 2</b></p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <br>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet<br> quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <br>
+        <button onclick="document.location= 'http://www.facebook.com/' ">facebook</button>
+        <br>
+        <br>
+        <a href="http://www.facebook.com/">facebook</a>
+        <br>
+        <br>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Second Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Nayan</td>
+                <td>Rabha</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Rahul</td>
+                <td>Deka</td>
+                <td>22</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <ul>
+            <li>Samsung</li>
+            <li>Apple</li>
+            <li>Lenovo</li>
+            <li>DELL</li>
+        </ul>
+        <br>
+        <ol type="a">
+            <li>Samsung</li>
+            <li>Apple</li>
+            <li>Lenovo</li>
+            <li>DELL</li>
+        </ol>
+        <p>select your </p>
+        <input id="cricket" type="radio">
+        <label for="cricket">cricket</label>
+        <br>
+        <input id="Football" type="radio">
+        <label for="Football">Football</label>
+        <p id="p1">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <script>document.getElementById('p1').innerHTML="Goerge"</script>
+        <p id="sum">This is a paragraph</p>
+        <script>
+            function sum(p1,p2){
+                return p1+p2
+            }
+            document.getElementById('sum').innerHTML=sum(8,3)
+        </script>
+        <p id="multiplication">This is a pragraph</p>
+        <script>
+            function multiplication(p1,p2){
+                return p1*p2
+            }document.getElementById('multiplication').innerHTML=multiplication(8,3)
+        </script>
+        <p id="a1">Welcome to Javascript</p>
+        <button onclick="document.getElementById('a1').style.fontSize='40px' ">Click to increase the font</button>
+        <button onclick="document.getElementById('a1').style.display='none' ">Click to hide the font</button>
+        <p id="hidden" style="display: none;">I am hidden element</p>
+        <button onclick="document.getElementById('hidden').style.display='block' ">Click to unhide</button>
+        <script>
+            window.alert("Are you sure you want to visit the page")
+        </script>
+        <p id="id2"></p>
+        <script>
+            var a=10;
+            var b=15;
+            var c=a+b;
+            document.getElementById('id2').innerHTML="The value of c is:" + c;
+            
+        </script>
+        <p id="id3"></p>
+        <script>
+            let d=40;
+            let e=60;
+            let f=d+e;
+            document.getElementById('id3').innerHTML="The value of c is: " + f;
+        </script>
+        <p id="id4"></p>
+        <!-- when we use the back slash after the backslash it will convert the "" or '' to special character-->
+        <script>
+            const fruit=["apple","orange","grapes"];
+            fruit[0]="pineaple";
+            fruit.push("Guava");
+            delete fruit[1];
+            const pi=3.14;
+            let p="nayanjyoti";
+            let p1=p.toUpperCase();
+            let p2=p.toLowerCase();
+            let p3="  nayan  ";  
+            let line="My name is \"nayan\" I am from Capgemini";
+            document.getElementById('id4').innerHTML="The value of pi is: " + pi;
+            
+            document.getElementById('id4').innerHTML="Length of p is: " +p.length;
+            document.getElementById('id4').innerHTML=line;
+            document.getElementById('id4').innerHTML=p.slice(2,8);
+            document.getElementById('id4').innerHTML=p1.concat(p2);
+            document.getElementById('id4').innerHTML=p3.trim();
+            document.getElementById('id4').innerHTML="The array is: " + fruit.sort();
+        </script>
+        <script>
+            let p=5+10+"Nayan"+10+5;
+            document.getElementById('id4').innerHTML=p;
+        </script>
+    </body>
+</html>
+<!-- My name is \Nayan -->

@@ -1,0 +1,197 @@
+<html>
+    <head>
+        
+        <title> Module Score Calculator </title>
+
+        <style>
+
+            h2{
+                margin-top: 40px;
+                text-align: center;
+            }
+
+            .form{
+                margin: auto;
+                padding-top: 30px;
+                padding-left: 525px;
+            }
+
+            #submit{
+                margin-left: ;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h2> Module Score Calculator </h2>
+
+        <form class="form">
+
+            <table>
+                <tr>
+                    <td> Enter Employee Number </td>
+                    <td> <input type="text" id="e_no"  pattern="\d{6}" maxlength="6" title="please enter 6 digits" required > </td>
+                </tr>
+
+                <tr>
+                    <td> Enter Employee Name </td>
+                    <td> <input type="text" id="e_name"  maxlength="30" required> </td>
+                </tr>
+
+                <tr>
+                    <td> Choose Domain </td>
+                    <td>
+                        <select id="domain" onchange="myDomain()" required>
+                            <option value="select_domain"> Select Domain </option>
+                            <option value="JEE"> JEE </option>
+                            <option value="NET"> .NET</option>
+                           
+                        </select> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Choose Module </td>
+                    <td>
+                        <select id="others" required>
+                            <option value="select_module"> Please select a domain </option>
+                           
+                        </select> 
+                         <select id="jee" required>
+                            <option value="select_module"> Please select a Module </option>
+                            <option value="core java">Core Java</option>
+                            <option value="Servlet JSP">Servelt-JSP</option>
+                            <option value="Spring">Spring</option>
+                        </select>
+                        <select id="net" required>
+                            <option value="select_module"> Please select a Module </option>
+                            <option value="c#">C#</option>
+                            <option value="ADO.NET">ADO.NET</option>
+                            <option value="ASP.NET">ASP.NET</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Enter MPT Marks </td>
+                    <td> <input type="text" id="mpt_marks" maxlength="100" required> </td>
+                </tr>
+
+                <tr>
+                    <td> Enter MTT Marks </td>
+                    <td> <input type="text" id="mtt_marks" size="3" required> </td>
+                </tr>
+
+                <tr>
+                    <td> Enter Assignment Marks </td>
+                    <td> <input type="text" id="assignment_marks" size="3" required> </td>
+                </tr>
+            </table> <br>
+
+            <button type="button" style="margin-left: 90px;" onclick="check()"> Calculate Module Score </button>
+
+        </form>
+
+        <center><span id="result"></span></center>
+    </body>
+    <script>
+        function myDomain()
+        {
+            var domain= document.getElementById("domain").value;
+            if(domain=='JEE')
+            {
+                document.getElementById('jee').style.display="block";
+                document.getElementById('net').style.display="none";
+                document.getElementById('others').style.display="none";
+
+            }
+            else if(domain=="NET")
+            {
+                document.getElementById('jee').style.display="none";
+                document.getElementById('net').style.display="block";
+                document.getElementById('others').style.display="none";
+            }
+            else
+            {
+                document.getElementById('jee').style.display="none";
+                document.getElementById('net').style.display="none";
+                document.getElementById('others').style.display="block";
+            }
+
+            
+
+        }
+        function check()
+        {
+            //marks
+            var mpt_marks = document.getElementById('mpt_marks').value;
+            var mtt_marks = document.getElementById('mtt_marks').value;
+            var assignment_marks = document.getElementById('assignment_marks').value;
+
+            if (isNaN(mpt_marks) || mpt_marks < 1 || mpt_marks > 64) {
+                alert("Please enter correct values for MPT marks")
+              } 
+              else if (isNaN(mtt_marks) || mtt_marks < 1 || mtt_marks > 70) {
+                alert("Please enter correct values for MTT marks")
+              } 
+              else if (isNaN(assignment_marks) || assignment_marks < 1 || assignment_marks > 100) {
+                alert("Please enter correct values for Assignment marks")
+              } 
+            else
+
+            {
+            assignment_marks = assignment_marks * (15/100);
+            mtt_marks = mtt_marks * (15/100);
+            mpt_marks = mpt_marks * (70/100);
+
+            total_marks = assignment_marks + mtt_marks + mpt_marks;
+            
+            if(total_marks <= 49 )
+            {
+                document.getElementById('result').innerHTML = '<p class="fail">As your total score is ' + total_marks + ', you have FAILED in your exam with a score of 0 </p>';
+            }
+            else if(total_marks >= 50 && total_marks <= 59 )
+            {
+                document.getElementById('result').innerHTML = '<p class="fail">As your total score is ' + total_marks + ', you have FAILED in your exam with a score of 1</p>';
+            }
+             else if(total_marks >= 60 && total_marks <= 69 )
+            {
+                document.getElementById('result').innerHTML = '<p class="pass">As your total score is ' + total_marks + ', you have PASSED in your exam with a score of 2</p>';
+            }
+             else if(total_marks >= 70 && total_marks <= 79 )
+            {
+                document.getElementById('result').innerHTML = '<p class="pass">As your total score is ' + total_marks + ', you have PASSED in your exam with a score of 3</p>';
+            }
+             else if(total_marks >= 80 && total_marks <= 89 )
+            {
+                document.getElementById('result').innerHTML = '<p class="pass">As your total score is ' + total_marks + ', you have PASSED in your exam with a score of 4</p>';
+            }
+            else
+            {
+                document.getElementById('result').innerHTML = 'As your total score is ' + total_marks + ', you have PASSED in your exam with a score of 5';
+            }
+        }
+        }
+    </script>
+    <style type="text/css">
+        .fail
+        {
+            color: red;
+        }
+        .pass
+        {
+            color: green;
+        }
+        #jee
+        {
+            display: none;
+        }
+        #net
+        {
+            display: none;
+        }
+    </style>
+</html>

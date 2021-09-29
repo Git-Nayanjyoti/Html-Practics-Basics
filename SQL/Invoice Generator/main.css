@@ -1,0 +1,71 @@
+body {
+    text-align: center;
+    background-color: rgba(26, 41, 48, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+#add-item-section {
+    display: inline-block;
+    text-align: left;
+    border: 1px solid;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+input {
+    display: block;
+    margin: 14px 0px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-decoration: underline;
+}
+
+button {
+    background-color: rgba(255, 216, 56, 1);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#invoice-div {
+    display: inline-block;
+    margin: 20px 0px;
+}
+
+table, tr, td, th {
+    border: 1px solid;
+}
+
+td, th {
+    padding: 10px;
+}
+
+.first-column {
+    text-align: left;
+}
+
+.last-column {
+    text-align: right;
+}
+
+.center-column {
+    text-align: center;
+}
+
+#generate-invoice {
+    display: none;
+    margin-bottom: 50px;
+}
+#error {
+    color: rgba(228, 64, 3);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add using Java</title>
+</head>
+<style>
+    .InpNo,
+    label,
+    input[type=number] {
+        padding: 5px;
+        margin: 5px;
+        writing-mode: ;
+        vertical-align: sub;
+    }
+
+    .InpNo {
+        padding: 0;
+    }
+</style>
+
+<body>
+    <form>
+        <div class="InpNo">
+            1st Number: <input id="firstno" type="number">
+            <br>
+            2nd Number: <input id="secondno" type="number">
+            <br>
+            <input type="button" onclick="multiplication()" Value='Multiply'>
+            <input type="button" onclick="division()" Value="Divide">
+
+    </form>
+    <p id="result"></p>
+    </div>
+    <script type="text/javascript">
+
+        function multiplication() {
+            first = document.getElementById("firstno").value;
+            second = document.getElementById("secondno").value;
+            document.getElementById("result").innerHTML = 'The result is:' + (first * second);
+        }
+        function division(a, b) {
+            first = document.getElementById("firstno").value;
+            second = document.getElementById("secondno").value;
+            document.getElementById("result").innerHTML = 'The result is:' + (first / second);
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

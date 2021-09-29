@@ -1,0 +1,12 @@
+<mobiles>
+<mobil1>
+<name>apple</name>
+<price>$10</price>
+<color>red</color>
+</mobile1>
+<mobile2>
+<name>samsung</name>
+<color>green</color>
+<price>$25</price>
+</mobile2>
+</mobiles>

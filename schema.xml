@@ -1,0 +1,73 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Trainee_details">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Trainee1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:float" name="employee_number"/>
+              <xs:element type="xs:string" name="module_name"/>
+              <xs:element type="xs:float" name="Mpt_marks"/>
+              <xs:element type="xs:float" name="mtt_marks"/>
+              <xs:element type="xs:float" name="assignment_marks"/>
+              <xs:element type="xs:float" name="total"/>
+              <xs:element type="xs:float" name="score"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Trainee2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:float" name="employee_number"/>
+              <xs:element type="xs:string" name="module_name"/>
+              <xs:element type="xs:float" name="Mpt_marks"/>
+              <xs:element type="xs:float" name="mtt_marks"/>
+              <xs:element type="xs:float" name="assignment_marks"/>
+              <xs:element type="xs:float" name="total"/>
+              <xs:element type="xs:float" name="score"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Trainee3">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:float" name="employee_number"/>
+              <xs:element type="xs:string" name="module_name"/>
+              <xs:element type="xs:float" name="Mpt_marks"/>
+              <xs:element type="xs:float" name="mtt_marks"/>
+              <xs:element type="xs:float" name="assignment_marks"/>
+              <xs:element type="xs:float" name="total"/>
+              <xs:element type="xs:float" name="score"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Trainee4">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:float" name="employee_number"/>
+              <xs:element type="xs:string" name="module_name"/>
+              <xs:element type="xs:float" name="Mpt_marks"/>
+              <xs:element type="xs:float" name="mtt_marks"/>
+              <xs:element type="xs:float" name="assignment_marks"/>
+              <xs:element type="xs:float" name="total"/>
+              <xs:element type="xs:float" name="score"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Trainee5">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+              <xs:element type="xs:float" name="employee_number"/>
+              <xs:element type="xs:string" name="module_name"/>
+              <xs:element type="xs:float" name="Mpt_marks"/>
+              <xs:element type="xs:float" name="mtt_marks"/>
+              <xs:element type="xs:float" name="assignment_marks"/>
+              <xs:element type="xs:float" name="total"/>
+              <xs:element type="xs:float" name="score"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

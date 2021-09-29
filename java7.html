@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            multiplication table
+        </title>
+    </head>
+    <body>
+        <form>
+            Enter a number whose multiplication table is to be print: <input type="number" id="num" required>
+            <input type ="button" onclick="printtable()" value="Print">
+        </form>
+        <p id="id"></p>
+        <script>
+            function printtable(){
+                var num=document.getElementById("num").value;
+                for(var i=1;i<=10;i++){
+                    document.write(num + "x" + i + "=" + (num*i) + "<br>");
+                   
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lenght of the given string
+        </title>
+    </head>
+    <body>
+        <form>
+            Enter a String: <input type="text" id="text" required>
+            <input type="button" onclick="lengt()" value="check the length">
+        </form>
+        <p id="id"></p>
+        <script>
+            function lengt(){
+                var string=document.getElementById("text").value;
+                document.getElementById("id").innerHTML="The lenth of the string is: " + (string.length);
+            }
+        </script>
+        
+    </body>
+</html>

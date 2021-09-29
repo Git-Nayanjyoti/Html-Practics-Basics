@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>No of vowels in a given string</title>
+    </head>
+    <body>
+        <form>
+            Enter a string: <input type="text" id="text">
+            <input type="button" onclick="vowel()" value="Find lenght of vowel">
+        </form>
+        <p id="id"></p>
+        <script>
+            function vowel(){
+                var word=document.getElementById("text").value;
+                var lengthofvowel=word.match(/[aeiou]/gi).length;
+                document.getElementById("id").innerHTML="The no of vowels is:" + lengthofvowel;
+            }
+        </script>
+    </body>
+</html>

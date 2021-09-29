@@ -1,0 +1,6 @@
+a) Select  Employee_Details.employ_number,  Employee_Details. model from train_details Trainee_Details,employee_ details where Trainee_Details.model_name! = 'serjet-JSP' and Trainee_Details. Employee_number = Employee_Details. Employee_ number
+
+b) Select count(employee number) from trainee_details where model_name = 'core java' and score =3
+
+c) ALTER TABLE employee_details
+ADD CHECK (domain_name in ('NET','JEE'));

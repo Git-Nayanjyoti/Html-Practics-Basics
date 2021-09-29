@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title> Form Validation </title>
+</head>
+
+<body>
+
+    <form onsubmit="return formvalidator()" id="contact-form" class="form">
+
+        <input type="text" placeholder="Your Name" name="name" id="name">
+        <input name="e-mail" placeholder="Email" type="text" id="email">
+        <input type="password" placeholder="Password" id="password">
+        <input type="tel" placeholder="Phone Number" id="phone">
+        <input type="submit" id="submit" value="Submit">
+
+    </form>
+
+    <script>
+
+        function formvalidator() {
+            var name = document.getElementById('name');
+            var email = document.getElementById('email');
+            var pass = document.getElementById('password');
+            var phone = document.getElementById('phone');
+
+            if (isAlphabet(name, 'please enter only alphabets')) {
+                if (emailValidator(email, 'please enter valid email')) {
+                    if (isPassword(pass, 'please use all the conditions')) {
+                        if (isNumeric(phone, 'please enter valid number')) {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+
+        function notempty(elem, helpermsg) {
+            if (elem.value.length == 0) {
+                alert(helpermsg);
+                elem.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function isAlphabet(elem, helperMsg) {
+            var alphaExp = /^[a-zA-Z ]*$/;
+            if (elem.value.match(alphaExp)) {
+                return true;
+            }
+            else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+
+        function emailValidator(elem, helperMsg) {
+            var emailExp = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;;
+            if (elem.value.match(emailExp)) {
+                return true;
+            }
+            else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+
+        function isPassword(elem, helperMsg) {
+            var passExp = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,20}$/;
+            if (elem.value.match(passExp)) {
+                return true;
+            }
+            else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+
+        function isNumeric(elem, helperMsg) {
+            var phoneExp = /^[0-9]{10}$/;
+            if (elem.value.match(phoneExp)) {
+                return true;
+            }
+            else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

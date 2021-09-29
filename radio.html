@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>
+        count radio buttons
+    </title>
+</head>
+
+<body>
+
+    <form>
+        Radio 1<input class="messageCheckbox" type="checkbox" id="a" value="rad1"><br>
+        Radio 2<input class="messageCheckbox" type="checkbox" id="b" value="rad2"><br>
+        Radio 3<input class="messageCheckbox" type="checkbox" id="c" value="rad3"><br>
+        Radio 4<input class="messageCheckbox" type="checkbox" id="d" value="rad4"><br>
+    </form>
+    <p id="q"></p>
+    <p id="p"></p>
+    <script>
+        const randomFunc = {
+            lower: getRandomLower,
+            upper: getRandomUpper,
+            number: getRandomNumber,
+            symbol: getRandomSymbol
+        }
+        var count = 0;
+        var Arr = document.getElementById('a').value;
+        var ArrOfInput = document.querySelectorAll('input[type="checkbox"]');
+        var checkedValue = "";
+        var inputElements = document.getElementsByClassName('messageCheckbox');
+        for (var i = 0; inputElements[i]; ++i) {
+            if (inputElements[i].checked == false) {
+                checkedValue = inputElements[i].value;
+            }
+        }
+        for (var RadioType of ArrOfInput) {
+            count += 1;
+
+        }
+        document.getElementById('q').innerHTML = "check" + randomFunc;
+        document.getElementById('p').innerHTML = "The count of radio button is: " + count;
+    </script>
+</body>
+
+</html>

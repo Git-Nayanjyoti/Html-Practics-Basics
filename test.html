@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add using Java</title>
+</head>
+<style>
+    .InpNo,
+    label,
+    input[type=number] {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .InpNo {
+        padding: 0;
+    }
+</style>
+
+<body>
+    <form>
+        <div class="InpNo">
+            1st Number: <input id="firstno" type="number" >
+            <br>
+            2nd Number: <input id="secondno" type="number" >
+           
+    </form>
+    <p id="result"></p>
+    </div>
+    <script>
+        var first = document.getElementById("firstno").value;
+        document.getElementById("result").innerHTML=first;
+
+        
+        var second = document.getElementById("secondno").value;
+        document.getElementById("result").innerHTML=second;
+
+
+    </script>
+
+
+</body>
+
+</html>
